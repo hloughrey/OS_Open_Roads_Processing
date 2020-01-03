@@ -22,6 +22,6 @@ This script does the following:
 5. Places a copy of the `dump` file on a the host machines desktop;
 
 ```
-docker exec -it road_closures_db_1 bash
+docker exec -it <name> bash
 ./load_road_data
 ```

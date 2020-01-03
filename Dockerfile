@@ -13,7 +13,7 @@ COPY initdb.sql /docker-entrypoint-initdb.d
 COPY create_postgis.sql /docker-entrypoint-initdb.d
 
 COPY oproad_essh_gb.zip load_road_data.sh create_gist_indexes.sql ./
-RUN unzip oproad_essh_gb.zip -d road_data
+RUN unzip oproad_essh_gb.zip -d road_data || true
 
 EXPOSE 5432
 CMD ["postgres"]
